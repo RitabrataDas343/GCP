@@ -13,7 +13,7 @@ unzip gsp335.zip
 ## Task 1
 
 ```bash
-gcloud container clusters create kraken-cluster \
+gcloud container clusters create security-demo-cluster459 \
    --zone us-central1-c \
    --machine-type n1-standard-4 \
    --num-nodes 2 \
@@ -21,7 +21,7 @@ gcloud container clusters create kraken-cluster \
 ```
 
 ```bash
-gcloud sql instances create kraken-cloud-sql --region us-central1
+gcloud sql instances create wordpress-db-326 --region us-central1
 ```
 
 ## Task 2
@@ -33,17 +33,17 @@ gcloud sql instances create kraken-cloud-sql --region us-central1
 ### Service account
 
 ```
-gcloud iam service-accounts create kraken-wordpress-sa
+gcloud iam service-accounts create sa-wordpress-928
 ```
 
 ```
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member="serviceAccount:kraken-wordpress-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com" \
+   --member="serviceAccount:sa-wordpress-928@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com" \
  --role="roles/cloudsql.client"
 ```
 
 ```
-gcloud iam service-accounts keys create key.json --iam-account=kraken-wordpress-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com
+gcloud iam service-accounts keys create key.json --iam-account=sa-wordpress-928@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com
 ```
 
 ```bash
