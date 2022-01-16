@@ -46,7 +46,7 @@ gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
 ```
 
 ```bash
-gcloud container clusters create orca-test-cluster --network orca-build-vpc --subnetwork orca-build-subnet --service-account orca-private-cluster-sa@qwiklabs-gcp-01-73bc421e624d.iam.gserviceaccount.com --enable-master-authorized-networks --master-authorized-networks 192.168.10.2/32 --enable-ip-alias --enable-private-nodes --master-ipv4-cidr 10.142.0.0/28 --enable-private-endpoint
+gcloud container clusters create orca-cluster-693 --network orca-build-vpc --subnetwork orca-build-subnet --service-account orca-private-cluster-666-sa@qwiklabs-gcp-04-f4bf76c78bc0.iam.gserviceaccount.com --enable-master-authorized-networks --master-authorized-networks 192.168.10.2/32 --enable-ip-alias --enable-private-nodes --master-ipv4-cidr 10.142.0.0/28 --enable-private-endpoint
 
 ```
 
