@@ -41,7 +41,7 @@ gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
 
 ```bash
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member serviceAccount:orca-cluster-199@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role projects/$DEVSHELL_PROJECT_ID/roles/orca_storage_update
+   --member serviceAccount:orca-private-cluster-666-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role projects/$DEVSHELL_PROJECT_ID/roles/orca_storage_creator_798
 
 ```
 
