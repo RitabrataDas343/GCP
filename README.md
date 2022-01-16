@@ -50,7 +50,7 @@ gcloud container clusters create orca-cluster-693 --network orca-build-vpc --sub
 
 ```
 ```ssh
-gcloud container clusters get-credentials orca-test-cluster --internal-ip --zone=us-east1-b
+gcloud container clusters get-credentials orca-cluster-693 --internal-ip --zone=us-east1-b
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
 ``
 ```
