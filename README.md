@@ -26,22 +26,22 @@ gcloud iam roles create orca_storage_update_832 \
 ```
 
 ```bash
-gcloud iam service-accounts create orca-private-cluster-sa \
+gcloud iam service-accounts create orca-cluster-199 \
    --display-name "Orca Private Cluster Service Account"
 
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member serviceAccount:orca-private-cluster-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/monitoring.viewer
+   --member serviceAccount:orca-cluster-199@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/monitoring.viewer
 
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member serviceAccount:orca-private-cluster-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/monitoring.metricWriter
+   --member serviceAccount:orca-cluster-199@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/monitoring.metricWriter
 
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member serviceAccount:orca-private-cluster-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/logging.logWriter
+   --member serviceAccount:orca-cluster-199@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/logging.logWriter
 ```
 
 ```bash
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-   --member serviceAccount:orca-private-cluster-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role projects/$DEVSHELL_PROJECT_ID/roles/orca_storage_update
+   --member serviceAccount:orca-cluster-199@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role projects/$DEVSHELL_PROJECT_ID/roles/orca_storage_update
 
 ```
 
